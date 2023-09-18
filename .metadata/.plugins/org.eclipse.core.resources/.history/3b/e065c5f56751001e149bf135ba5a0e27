@@ -1,0 +1,9 @@
+package dao;
+
+import domain.boardVO;
+
+public interface BoardDAO {
+
+	int insert(boardVO bvo);
+
+}

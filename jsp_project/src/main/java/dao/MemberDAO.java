@@ -1,0 +1,21 @@
+package dao;
+
+import java.util.List;
+
+import domain.memberVO;
+
+public interface MemberDAO {
+
+	int register(memberVO mvo);
+
+	memberVO login(memberVO mvo);
+
+	int lastlogin(String id);
+
+	List<memberVO> list();
+
+	int update(memberVO mvo);
+
+	int remove(String id);
+
+}

@@ -1,0 +1,13 @@
+package dao;
+
+import java.util.List;
+
+import domain.boardVO;
+
+public interface BoardDAO {
+
+	int insert(boardVO bvo);
+
+	List<boardVO> list();
+
+}

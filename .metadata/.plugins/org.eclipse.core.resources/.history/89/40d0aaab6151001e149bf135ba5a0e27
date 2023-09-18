@@ -1,0 +1,14 @@
+package service;
+
+import domain.boardVO;
+
+public class BoardServiceImpl implements BoardService 
+{
+
+	@Override
+	public int insert(boardVO bvo) {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+}

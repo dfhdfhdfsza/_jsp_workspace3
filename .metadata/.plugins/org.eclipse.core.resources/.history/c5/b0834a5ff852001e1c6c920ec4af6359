@@ -1,0 +1,38 @@
+package domain;
+
+public class pagingVO 
+{
+	private int pageNo;//현재 페이지 번호
+	private int qty; //한 페이지당 보여줄 게시글 수
+	
+	public pagingVO()
+	{
+		this(1,10);
+	}
+	//list.jsp에서 페이지번호버튼을 눌렀을때
+	//pageNo,qty를 받아오는 생성자
+	public pagingVO(int pageNo,int qty)
+	{
+		this.pageNo=pageNo;
+		this.qty=qty;
+	}
+	public int getPageStart()
+	{
+		return (pageNo-1)*qty;
+	}
+	//--------------getter/setter----------------------------
+	public int getPageNo() {
+		return pageNo;
+	}
+	public void setPageNo(int pageNo) {
+		this.pageNo = pageNo;
+	}
+	public int getQty() {
+		return qty;
+	}
+	public void setQty(int qty) {
+		this.qty = qty;
+	}
+	
+
+}

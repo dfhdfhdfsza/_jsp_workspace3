@@ -1,0 +1,14 @@
+package dao;
+
+import domain.boardVO;
+
+public class BoardDAOImpl implements BoardDAO 
+{
+
+	@Override
+	public int insert(boardVO bvo) {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+}

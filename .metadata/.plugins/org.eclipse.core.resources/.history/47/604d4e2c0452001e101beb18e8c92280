@@ -1,0 +1,53 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<h1>Modify Page</h1>
+	<form action="/brd/modify">
+		<table>
+			<tr>
+				<th>Bno</th>
+				<td>
+					<input type="text" readonly="readonly">
+				</td>
+			</tr>
+			<tr>
+				<th>Title</th>
+				<td>
+					 <input type="text" id="title">
+				</td>
+			</tr>
+			<tr>
+				<th>writer</th>
+				<td>
+					<input type="text" id="writer">
+				</td>
+			</tr>
+			<tr>
+				<th>content</th>
+				<td>
+					<textarea rows="3" cols="50" name="content"></textarea>
+				</td>
+			</tr>
+			<tr>
+				<th>Regdate</th>
+				<td>
+					${bvo.regdate}	
+				</td>
+			</tr>
+			<tr>
+				<th>Moddate</th>
+				<td>
+					${bvo.moddate}
+				</td>
+			</tr>
+		</table>
+		<button type="submit">수정</button>
+	</form>
+</body>
+</html>
