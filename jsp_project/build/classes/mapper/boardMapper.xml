@@ -5,8 +5,8 @@
   
   <mapper namespace="BoardMapper">
   	<insert id="add" parameterType="bvo">
-  		insert into board (title,writer,content)
-  		values(#{title},#{writer},#{content})
+  		insert into board (title,writer,content,image_File)
+  		values(#{title},#{writer},#{content},#{image_File})
   	</insert>
   	<select id="list" resultType="bvo">
   		select * from board order by bno desc
@@ -17,7 +17,7 @@
   	</select>
   	
   	<update id="edit" parameterType="bvo">
-  		update board set title=#{title},writer=#{writer},content=#{content},moddate=now()
+  		update board set title=#{title},content=#{content},moddate=now(),image_File=#{image_File}
   		where bno=#{bno}
   	</update>
   	

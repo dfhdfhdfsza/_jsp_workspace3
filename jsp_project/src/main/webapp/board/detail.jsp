@@ -26,7 +26,10 @@
 		</tr>
 		<tr>
 			<th>CONTENT</th>
-			<td>${bvo.content}</td>
+			<td>
+				${bvo.content}
+					<img src="/_fileUpload/${bvo.image_File}" alt="No image">
+			</td>
 		</tr>
 		<tr>
 			<th>REGDATE</th>
@@ -42,8 +45,11 @@
 			<td>${bvo.viewcnt}</td>
 		</tr>
 	</table>
-	<a href="/brd/modify?bno=${bvo.bno}"><button type="button">modify</button></a>
-	<a href="/brd/remove?bno=${bvo.bno}"><button type="button">remove</button></a> 
+	
+	<c:if test="${ses.id eq bvo.writer}">
+		<a href="/brd/modify?bno=${bvo.bno}"><button type="button">modify</button></a>
+		<a href="/brd/remove?bno=${bvo.bno}"><button type="button">remove</button></a>
+	</c:if>
 	<a href="/brd/pageList"><button type="button">list</button></a>
 	
 	<br><hr>
